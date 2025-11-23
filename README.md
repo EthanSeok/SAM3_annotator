@@ -53,6 +53,7 @@ pip install torch==2.7.0 torchvision torchaudio --index-url https://download.pyt
 git clone https://github.com/facebookresearch/sam3.git
 cd sam3
 pip install -e .
+pip install PyQt5 
 ```
 
 4. **Install additional dependencies for example notebooks or development:**
@@ -62,10 +63,9 @@ pip install -e .
 pip install -e ".[notebooks]"
 ```
 
-### 필수 패키지
-
+5. **Install annotator**
 ```bash
-pip install PyQt5 
+move ../annotator.py ./sam3/
 ```
 
 ---
