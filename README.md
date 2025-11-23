@@ -4,7 +4,7 @@
 
 SAM3 Annotator는 SAM3(Segment Anything Model 3)을 활용한 강력한 GUI 기반 어노테이션 도구입니다. 텍스트, 박스, 포인트 프롬프트 등 다양한 입력 방식을 사용하여 이미지 내 객체를 효율적으로 라벨링하고 어노테이션할 수 있습니다.
 
-![SAM3 Annotator Interface](assets/annotator_interface.png)
+![SAM3 Annotator Interface](assets/annotator.png)
 
 ## 주요 기능
 
