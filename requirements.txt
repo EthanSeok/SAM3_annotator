@@ -1,0 +1,3 @@
+pandas
+pyqt5
+./triton-3.2.0-cp312-cp312-win_amd64.whl
