@@ -1,4 +1,9 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates. All Rights Reserved
+<<<<<<< HEAD
+=======
+
+# pyre-unsafe
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
 """
 This file extracts the frames for the frame datasets in SA-CO/Gold and Silver.
 
@@ -66,9 +71,15 @@ def process_image(args):
 def main():
     assert len(sys.argv) > 1, "You have to provide the name of the dataset"
     dataset_name = sys.argv[1]
+<<<<<<< HEAD
     assert (
         dataset_name in annotation_files
     ), f"The dataset can be one of {list(annotation_files.keys())}"
+=======
+    assert dataset_name in annotation_files, (
+        f"The dataset can be one of {list(annotation_files.keys())}"
+    )
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
     all_outputs = []
     for file in annotation_files[dataset_name]:
         with open(os.path.join(config["path_annotations"], file), "r") as f:

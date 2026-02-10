@@ -1,4 +1,9 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates. All Rights Reserved
+<<<<<<< HEAD
+=======
+
+# pyre-unsafe
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
 import argparse
 from multiprocessing import Pool
 from pathlib import Path
@@ -49,7 +54,11 @@ def main(args, n_workers=20):
         paths = [
             (
                 raw_folder_food_images
+<<<<<<< HEAD
                 / f'{Path(each).stem.split("_")[-1]}{Path(each).suffix}',
+=======
+                / f"{Path(each).stem.split('_')[-1]}{Path(each).suffix}",
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
                 processed_folder / each,
             )
             for each in img_filenames

@@ -1,4 +1,9 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates. All Rights Reserved
+<<<<<<< HEAD
+=======
+
+# pyre-unsafe
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
 import argparse
 import logging
 import os
@@ -56,9 +61,15 @@ class YtVideoPrep:
         df = self.yt1b_start_end_time_df[
             self.yt1b_start_end_time_df.saco_yt1b_id == self.saco_yt1b_id
         ]
+<<<<<<< HEAD
         assert (
             len(df) == 1
         ), f"Expected exactly 1 row for saco_yt1b_id: {self.saco_yt1b_id}, found {len(df)}"
+=======
+        assert len(df) == 1, (
+            f"Expected exactly 1 row for saco_yt1b_id: {self.saco_yt1b_id}, found {len(df)}"
+        )
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
         id_and_frame_map_row = df.iloc[0]
 
         yt_video_id = (
@@ -80,9 +91,15 @@ class YtVideoPrep:
     def download_youtube_video(self):
         video_url = f"https://youtube.com/watch?v={self.yt_video_id}"
 
+<<<<<<< HEAD
         assert os.path.exists(
             self.cookies_file
         ), f"Cookies file '{self.cookies_file}' not found. Must have it to download videos."
+=======
+        assert os.path.exists(self.cookies_file), (
+            f"Cookies file '{self.cookies_file}' not found. Must have it to download videos."
+        )
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
 
         outtmpl = self.raw_video_path
 

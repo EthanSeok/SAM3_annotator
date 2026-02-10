@@ -1,4 +1,9 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates. All Rights Reserved
+<<<<<<< HEAD
+=======
+
+# pyre-unsafe
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
 import ast
 import concurrent.futures
 import os
@@ -9,7 +14,10 @@ from concurrent.futures import as_completed, ThreadPoolExecutor
 from pathlib import Path
 
 import yt_dlp
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
 from utils import (
     annotation_files,
     config,
@@ -242,9 +250,15 @@ def download_sav():
 def main():
     assert len(sys.argv) > 1, "You have to provide the name of the dataset"
     dataset_name = sys.argv[1]
+<<<<<<< HEAD
     assert (
         dataset_name in annotation_files
     ), f"The dataset can be one of {list(annotation_files.keys())}"
+=======
+    assert dataset_name in annotation_files, (
+        f"The dataset can be one of {list(annotation_files.keys())}"
+    )
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
 
     if dataset_name == "yt1b":
         download_youtube()

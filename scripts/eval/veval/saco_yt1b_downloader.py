@@ -1,7 +1,14 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates. All Rights Reserved
+<<<<<<< HEAD
 import argparse
 import logging
 
+=======
+
+# pyre-unsafe
+import argparse
+import logging
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
 import multiprocessing as mp
 import os
 from functools import partial

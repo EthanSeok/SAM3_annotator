@@ -1,5 +1,10 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates. All Rights Reserved
 
+<<<<<<< HEAD
+=======
+# pyre-unsafe
+
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
 """Simple script to run the CGF1 evaluator given a prediction file and GT file(s).
 
 Usage: python standalone_cgf1.py --pred_file <path_to_prediction_file> --gt_files <path_to_gt_file1> <path_to_gt_file2> ...

@@ -959,7 +959,11 @@ class SAM3Annotator(QMainWindow):
                 torch.backends.cudnn.allow_tf32 = True
 
             sam3_root = os.path.join(os.path.dirname(sam3.__file__), "..")
+<<<<<<< HEAD
             bpe_path = os.path.join(sam3_root, "assets", "bpe_simple_vocab_16e6.txt.gz")
+=======
+            bpe_path = os.path.join(sam3_root, 'sam3', "assets", "bpe_simple_vocab_16e6.txt.gz")
+>>>>>>> 5e878e7 (Segmentation Anything Model 3)
 
             # Enable inst_interactivity for point prompt support
             self.model = build_sam3_image_model(
