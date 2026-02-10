@@ -2,7 +2,9 @@
 
 ## 개요
 
-SAM3 Annotator는 SAM3(Segment Anything Model 3)을 활용한 강력한 GUI 기반 어노테이션 도구입니다. 텍스트, 박스, 포인트 프롬프트 등 다양한 입력 방식을 사용하여 이미지 내 객체를 효율적으로 라벨링하고 어노테이션할 수 있습니다.
+SAM3 Annotator는 Meta의 SAM3(Segment Anything Model 3)을 기반으로 개발된 강력한 GUI 기반 어노테이션 도구입니다. 텍스트, 박스, 포인트 프롬프트 등 다양한 입력 방식을 사용하여 이미지 내 객체를 효율적으로 라벨링하고 어노테이션할 수 있습니다.
+
+> **Note**: 본 프로젝트는 Meta의 [SAM3 (Segment Anything Model 3)](https://github.com/facebookresearch/sam3)을 기반으로 하여 어노테이션 도구로 확장한 것입니다.
 
 ![SAM3 Annotator Interface](assets/annotator.png)
 
@@ -29,44 +31,55 @@ SAM3는 [링크](https://github.com/facebookresearch/sam3)에서 확인 가능�
 
 ### Prerequisites
 
-- Python 3.12 or higher
-- PyTorch 2.7 or higher
+- Python 3.12
+- PyTorch 2.7
 - CUDA-compatible GPU with CUDA 12.6 or higher
 
-1. **Create a new Conda environment:**
+### 설치 과정
+
+1. **Conda 환경 생성 및 활성화:**
 
 ```bash
-conda create -n sam3 python=3.12
-conda deactivate
+conda create -n sam3 python==3.12
 conda activate sam3
 ```
 
-2. **Install PyTorch with CUDA support:**
+2. **PyTorch 설치 (본인 GPU에 해당하는 버전으로 설치):**
 
 ```bash
 pip install torch==2.7.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 ```
 
-3. **Clone the repository and install the package:**
+3. **SAM3 패키지 설치:**
 
 ```bash
-git clone https://github.com/facebookresearch/sam3.git
 cd sam3
 pip install -e .
-pip install PyQt5 
 ```
 
-4. **Install additional dependencies for example notebooks or development:**
+
+4. **Triton 설치 (플랫폼별):**
+
+**Windows:**
+```bash
+pip install triton-3.2.0-cp312-cp312-win_amd64.whl
+```
+
+**Linux:**
+```bash
+pip install triton
+```
+
+
+5. **필수 의존성 패키지 설치:**
 
 ```bash
-# For running example notebooks
-pip install -e ".[notebooks]"
+pip install -r requirements.txt
 ```
 
-5. **Install annotator**
-```bash
-move ../annotator.py ./sam3/
-```
+> **Note**: `requirements.txt`에는 numpy, opencv-python, PyQt5, einops, decord, pycocotools, psutil이 포함되어 있습니다.
+
+> **Note**: Mac 사용자는 이 단계를 건너뛰세요.
 
 ---
 
@@ -393,6 +406,32 @@ A: 예, 하지만 훨씬 느릴 것입니다. 모델은 사용 가능한 경우 
 
 ---
 
+## Citation
+
+이 도구를 연구에 사용하신다면 다음을 인용해주세요:
+
+```bibtex
+@misc{sam3annotator2026,
+  title={SAM3 Annotator: An Interactive Annotation Tool Based on SAM3},
+  author={Your Name},
+  year={2026},
+  howpublished={\url{https://github.com/yourusername/sam3-annotator}}
+}
+```
+
+본 프로젝트는 SAM3 모델을 기반으로 하므로, 다음 원본 논문도 함께 인용해주시기 바랍니다:
+
+```bibtex
+@article{sam3,
+  title={Segment Anything Model 3},
+  author={Meta AI Research},
+  year={2025},
+  journal={arXiv preprint}
+}
+```
+
+---
+
 ## 기여하기
 
 버그를 발견했거나 기능 요청이 있나요? GitHub 저장소에 이슈를 열어주세요.
@@ -401,8 +440,22 @@ A: 예, 하지만 훨씬 느릴 것입니다. 모델은 사용 가능한 경우 
 
 ## 라이센스
 
-Copyright (c) 2024. SAM3 Annotator Tool.  
-자세한 내용은 LICENSE 파일을 참조하세요.
+본 프로젝트는 **SAM License**를 따릅니다. 이는 Meta의 SAM3 모델을 기반으로 하기 때문입니다.
+
+주요 라이센스 조항:
+- 비독점적, 전 세계적, 로열티 프리 라이센스로 SAM Materials를 사용, 복제, 배포, 수정할 수 있습니다.
+- 연구 결과를 발표할 때는 SAM Materials 사용을 명시해야 합니다.
+- 적용 가능한 법률 및 규정을 준수해야 합니다.
+
+자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
+
+원본 SAM3 프로젝트: [https://github.com/facebookresearch/sam3](https://github.com/facebookresearch/sam3)
+
+---
+
+## Acknowledgments
+
+본 프로젝트는 Meta AI Research의 SAM3 (Segment Anything Model 3)를 기반으로 개발되었습니다. SAM3 팀의 뛰어난 연구와 오픈소스 기여에 감사드립니다.
 
 ---
 
