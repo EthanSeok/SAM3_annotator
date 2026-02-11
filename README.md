@@ -406,31 +406,7 @@ A: 예, 하지만 훨씬 느릴 것입니다. 모델은 사용 가능한 경우 
 
 ---
 
-## Citation
 
-이 도구를 연구에 사용하신다면 다음을 인용해주세요:
-
-```bibtex
-@misc{sam3annotator2026,
-  title={SAM3 Annotator: An Interactive Annotation Tool Based on SAM3},
-  author={Your Name},
-  year={2026},
-  howpublished={\url{https://github.com/yourusername/sam3-annotator}}
-}
-```
-
-본 프로젝트는 SAM3 모델을 기반으로 하므로, 다음 원본 논문도 함께 인용해주시기 바랍니다:
-
-```bibtex
-@article{sam3,
-  title={Segment Anything Model 3},
-  author={Meta AI Research},
-  year={2025},
-  journal={arXiv preprint}
-}
-```
-
----
 
 ## 기여하기
 
